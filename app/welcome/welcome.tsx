@@ -6,15 +6,52 @@ export function Welcome() {
     <main>
       <div>
         <header>
-          <div>
-            helo
-          </div>
         </header>
         <div>
-          <b>he</b>
-          <h1>hey</h1>
-           testing testing
-           <form action="https://hook.us2.make.com/hvtlobj1qxn526j92i601h7ool6zjxud" method="post"></form>
+          <form
+            action="https://hook.us2.make.com/hvtlobj1qxn526j92i601h7ool6zjxud"
+            method="post"
+            encType="multipart/form-data"
+          >
+            <div>
+              <label htmlFor="user-name">Name</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="user-email">Email</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="user-skills">Skills</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="">Job Types</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="job-industries">Industries</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="">Location Preferences</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="">Keywords to Avoid</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div>
+              <input type="submit" value="Send"/>
+            </div>
+          </form>
         </div>
       </div>
     </main>
