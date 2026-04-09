@@ -1,5 +1,4 @@
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
+
 
 export function Welcome() {
   return (
@@ -9,44 +8,49 @@ export function Welcome() {
         </header>
         <div>
           <form
-            action="https://hook.us2.make.com/hvtlobj1qxn526j92i601h7ool6zjxud"
+            action="/api/job-info"
             method="post"
             encType="multipart/form-data"
           >
             <div>
-              <label htmlFor="user-name">Name</label>
+              <label htmlFor="name">Name</label>
               <br />
-              <input type="text" />
+              <input name="name" id="name" type="text" />
             </div>
             <div>
-              <label htmlFor="user-email">Email</label>
+              <label htmlFor="email">Email</label>
               <br />
-              <input type="text" />
+              <input name="email" id="email" type="text" />
             </div>
             <div>
-              <label htmlFor="user-skills">Skills</label>
+              <label htmlFor="skills">Skills</label>
               <br />
-              <input type="text" />
+              <input name="skills" id="skills" type="text" />
             </div>
             <div>
-              <label htmlFor="">Job Types</label>
+              <label htmlFor="jobTypes">Job Types</label>
               <br />
-              <input type="text" />
+              <input name="jobTypes" id="jobTypes" type="text" />
             </div>
             <div>
-              <label htmlFor="job-industries">Industries</label>
+              <label htmlFor="industries">Industries</label>
               <br />
-              <input type="text" />
+              <input name="industries" id="industries" type="text" />
             </div>
             <div>
-              <label htmlFor="">Location Preferences</label>
+              <label htmlFor="location">Location Preferences</label>
               <br />
-              <input type="text" />
+              <input name="location" id="location" type="text" />
             </div>
             <div>
-              <label htmlFor="">Keywords to Avoid</label>
+              <label htmlFor="keywordsAvoid">Keywords to Avoid</label>
               <br />
-              <input type="text" />
+              <input name="keywordsAvoid" id="keywordsAvoid" type="text" />
+            </div>
+            <div>
+              <label htmlFor="resume">Resume</label>
+              <br />
+              <input name="resume" id="resume" type="file" />
             </div>
             <div>
               <input type="submit" value="Send"/>
