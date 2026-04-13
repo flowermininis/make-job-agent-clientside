@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "http://localhost:5173"],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
   }),
@@ -32,7 +32,7 @@ app.get("/api", (req, res) => {
   res.send("Hello, World!");
 });
 
-app.get("/api/all-job-info", async (req, res) => {
+app.get("/api/job-info", async (req, res) => {
   const jobs = await Job.find({});
   res.status(200).json(jobs);
   //res.send("Hello!! hello!!!");
