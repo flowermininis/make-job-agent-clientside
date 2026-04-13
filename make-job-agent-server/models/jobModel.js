@@ -22,7 +22,10 @@ const jobSchema = new mongoose.Schema(
         items: [String],
       },
     ],
-    job_id: String,
+    job_id: {
+      type: String,
+      index: true,
+    },
   },
   {
     timestamps: true,
