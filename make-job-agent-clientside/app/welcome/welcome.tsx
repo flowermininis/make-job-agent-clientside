@@ -26,6 +26,7 @@ const handleSubmit = (event: React.SubmitEvent<HTMLFormElement>) => {
 export function Welcome() {
   return (
     <main>
+      <title>Submit Your Form</title>
       <div className="">
         <header></header>
         <div className="flex justify-center flex-col m-auto h-screen w-[60vw]">

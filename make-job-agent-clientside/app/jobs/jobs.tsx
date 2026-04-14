@@ -32,6 +32,7 @@ export function Jobs() {
 
   return (
     <html className="scroll-smooth!">
+      <title>Results</title>
       <body>
         <main>
           <div className="flex justify-center">
