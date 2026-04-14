@@ -31,7 +31,7 @@ export function Jobs() {
   }, []);
 
   return (
-    <html>
+    <html className="scroll-smooth!">
       <body>
         <main>
           <div className="flex justify-center">
@@ -40,13 +40,13 @@ export function Jobs() {
                 today's jobs!
               </h1>
               {jobs.map((j) => (
-                <div className="border-blue-900 border-2 w-[70vw] mb-3 rounded-2xl align-middle hover:bg-blue-200 transition delay-150 p-6">
-                  <details className="open:[&_svg]:-rotate-180">
-                    <summary className="text-3xl flex cursor-pointer list-none items-center gap-4">
+                <div className="border-blush-rose-200 hover:border-blush-rose-300 border-2 w-[70vw] mb-3 rounded-2xl align-middle hover:bg-soft-apricot-100 transition delay-50 p-6 ease-in-out hover:-translate-y-1 hover:scale-110">
+                  <details className="open:[&_svg]:-rotate-180 transition-all ">
+                    <summary className="text-gray-800 text-3xl flex cursor-pointer list-none items-center gap-4">
                       <div>
                         {/* <!-- notice here, we added our own triangle/arrow svg --> */}
                         <svg
-                          className="transform rotate-0 text-blue-700 transition-all duration-300"
+                          className="transform rotate-0 text-berry-crush-500 transition-all duration-300"
                           fill="none"
                           height="20"
                           width="20"
@@ -59,7 +59,7 @@ export function Jobs() {
                           <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                       </div>
-                      <div>
+                      <div className="text-blush-rose-600 hover:text-blush-rose-800">
                         {j.job_name} — {j.company}
                       </div>
                     </summary>
@@ -70,8 +70,9 @@ export function Jobs() {
                         {j.application_link.map((al) => (
                           <li className="inline p-2 text-xl">
                             <a
-                              className=" hover:text-green-600 transition delay-25 font-medium"
+                              className="text-night-bordeaux-500 hover:text-night-bordeaux-700 transition delay-25 font-medium"
                               href={al.link}
+                              target="_blank"
                             >
                               {al.title}
                             </a>
@@ -81,13 +82,15 @@ export function Jobs() {
                       </ul>
                       <div>
                         <h2 className="text-xl">Description:</h2>
-                        <p className="pl-10 pr-3">{j.description}</p>
+                        <p className="pl-10 pt-5 pr-3 whitespace-pre-wrap">
+                          {j.description}
+                        </p>
                       </div>
                       <ul>
                         {j.job_highlights.map((jh) => (
                           <li>
                             <div className="text-xl pt-5">{jh.title}:</div>
-                            <ul className=" list-disc pl-10">
+                            <ul className=" list-disc pl-10 pt-2">
                               {jh.items.map((jhi) => (
                                 <li>{jhi}</li>
                               ))}
