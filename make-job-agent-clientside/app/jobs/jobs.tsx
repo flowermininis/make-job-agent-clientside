@@ -36,8 +36,8 @@ export function Jobs() {
         <main>
           <div className="flex justify-center">
             <div>
-              <h1 className="text-7xl text-center pt-10 pb-10">
-                today's jobs!
+              <h1 className="text-7xl text-center pt-10 pb-10 text-blush-rose-700">
+                jobs found for you!
               </h1>
               {jobs.map((j) => (
                 <div className="border-blush-rose-200 hover:border-blush-rose-300 border-2 w-[70vw] mb-3 rounded-2xl align-middle hover:bg-soft-apricot-100 transition delay-50 p-6 ease-in-out hover:-translate-y-1 hover:scale-110">

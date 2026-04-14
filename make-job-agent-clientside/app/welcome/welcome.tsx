@@ -32,7 +32,7 @@ export function Welcome() {
           <form onSubmit={handleSubmit} encType="multipart/form-data">
             <div>
               <label
-                className="text-xl block font-medium justify-center text-center"
+                className="text-xl block font-medium justify-center text-center text-blush-rose-700"
                 htmlFor="jobs"
               >
                 SerpAPI JSON File

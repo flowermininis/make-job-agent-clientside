@@ -58,18 +58,24 @@ app.post("/api/job-info", upload.single("jobs"), async (req, res) => {
   }
 
   for (i = 0; i < jobsResults.length; i++) {
-    helpme = await Job.create({
-      job_name: jobsResults[i].title,
-      company: jobsResults[i].company_name,
-      location: jobsResults[i].location,
-      src: jobsResults[i].via,
-      application_link: jobsResults[i].apply_options,
-      description: jobsResults[i].description,
-      job_highlights: jobsResults[i].job_highlights,
+    const jobExists = await Job.exists({
       job_id: jobsResults[i].job_id,
     });
 
-    testJobs.push(helpme);
+    if (!jobExists) {
+      helpme = await Job.create({
+        job_name: jobsResults[i].title,
+        company: jobsResults[i].company_name,
+        location: jobsResults[i].location,
+        src: jobsResults[i].via,
+        application_link: jobsResults[i].apply_options,
+        description: jobsResults[i].description,
+        job_highlights: jobsResults[i].job_highlights,
+        job_id: jobsResults[i].job_id,
+      });
+
+      testJobs.push(helpme);
+    }
   }
 
   //res.status(200).json({ message: "it worked!", body: testJobs });
